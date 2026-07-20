@@ -1069,7 +1069,8 @@ DOM.paperAlbumTrig.addEventListener('click', () => {
     if (res.ticket) {
       Injector.inject(res);
     } else {
-      showModal({ text: "Error de autenticación.", showOk: true });
+      const msg = res.message || "Error de autenticación.";
+      showModal({ text: msg, showOk: true });
     }
   });
 
