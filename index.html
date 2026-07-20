@@ -456,9 +456,9 @@
         body: JSON.stringify(localPayload)
       });
       return await response.json();
-    } catch (error) {
+    } } catch (error) {
       console.error("Network Error:", error);
-      return { status: "error", message: "Error de conexión" };
+      return { status: "error", message: "Error de conexión: " + error.toString() };
     } finally {
       if (localPayload.hash) localPayload.hash = null;
       if (localPayload.dominio) localPayload.dominio = null;    
