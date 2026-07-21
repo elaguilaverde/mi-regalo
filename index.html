@@ -1077,7 +1077,11 @@ DOM.paperAlbumTrig.addEventListener('click', () => {
 
   window.AuraAPI = {
     saveSession: saveSession,
-    performLogout: performLogout
+    performLogout: performLogout,
+    getAudioCtx: () => audioCtx,
+    getMasterGain: () => masterGain,
+    initAudioCtx: initAudioCtx,
+    playLyreNote: playLyreNote
   };
 
   document.addEventListener('click', e => { if (!e.target.closest('#userMenuWrap')) document.getElementById('userDropdown').style.display = 'none'; });
